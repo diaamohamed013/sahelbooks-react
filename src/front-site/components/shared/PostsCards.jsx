@@ -1,0 +1,1 @@
+// custom component for buttons or inputs (pass props like size, color, className, etc...)

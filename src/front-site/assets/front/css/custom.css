@@ -1,0 +1,320 @@
+.customizedAlert {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px 10px;
+}
+
+.customizedAlert .userViewText {
+    color: #333 !important;
+}
+
+.customizedAlert .userViewBtn {
+    color: #222 !important;
+    background-color: #ffb22b !important;
+    border-radius: 50px !important;
+    -webkit-border-radius: 50px !important;
+    -moz-border-radius: 50px !important;
+    -ms-border-radius: 50px !important;
+    -o-border-radius: 50px !important;
+    transform: unset !important;
+    -webkit-transform: unset !important;
+    -moz-transform: unset !important;
+    -ms-transform: unset !important;
+    -o-transform: unset !important;
+}
+
+.btn.disabled,
+.btn:disabled {
+    opacity: .35;
+}
+
+.btn.disabled:hover:not(.sendBtn),
+.btn:disabled:hover:not(.sendBtn) {
+    background-color: #007bff;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+/* #go-top {
+    bottom: 75px;
+} */
+
+.page-content {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/*step progressbar*/
+.progressbar {
+    padding-top: 15px !important;
+    overflow: hidden;
+    counter-reset: step;
+    width: 60%;
+    margin: 30px auto 0px;
+}
+
+.progressbar li {
+    list-style-type: none;
+    color: #444;
+    font-size: 15px;
+    font-weight: 500;
+    width: 50%;
+    float: left;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.progressbar li:before {
+    /* content: counter(step); */
+    /* counter-increment: step; */
+    content: "\f192";
+    font-family: 'Font Awesome 5 Free';
+    width: 40px;
+    line-height: 40px;
+    display: block;
+    font-size: 15px;
+    color: #999;
+    background: #f1f1f1;
+    border-radius: 50%;
+    margin: -13px auto 6px auto;
+}
+
+/*progressbar connectors*/
+.progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #f1f1f1;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+    /*put it behind the numbers*/
+}
+
+.progressbar li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+.progressbar li.active:before,
+.progressbar li.active:after {
+    background: #255dbe;
+    color: #f1f1f1;
+}
+
+.vtcha {
+    max-width: 100%;
+}
+
+.vtcha .item-box,
+.vtcha .target-box {
+    width: 170px;
+    margin: 10px auto 0;
+}
+
+
+a.category-title {
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 25px;
+    background: #fff;
+    border: 1px solid #eee;
+    color: #181818;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+a.category-title:hover {
+    text-decoration: underline;
+    background: cornflowerblue;
+    color: #fff;
+    border-color: cornflowerblue;
+}
+
+a.category-title.active {
+    background: cornflowerblue;
+    border-color: cornflowerblue;
+    color: #fff;
+}
+
+/*pagination*/
+
+.pagination {
+    display: block;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+}
+
+ul.pagination li {
+    display: inline-block;
+    margin: 5px;
+}
+
+ul.pagination li a {
+    background: #f1f1f1;
+    padding: 8px 14px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+ul.pagination li a:hover {
+    background: #6495ed;
+    color: #fff !important;
+}
+
+li.active.page-num a {
+    background: #6495ed;
+}
+
+ul.pagination li.disabled {
+    display: none;
+}
+
+.pagination>.active>a {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #6495ed !important;
+    border-color: #6495ed !important;
+}
+
+li.next a {
+    background: #fff !important;
+    font-size: 30px;
+    line-height: 13px;
+}
+
+li.next a:hover {
+    color: #333 !important;
+}
+
+li.prev a {
+    background: #fff !important;
+    font-size: 30px;
+    line-height: 15px;
+}
+
+li.prev:hover {
+    color: #333 !important;
+}
+
+/*pagination end*/
+
+.select2-container,
+.select2-dropdown,
+.select2-search,
+.select2-results {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+/* .notifications_btn {
+    background: white !important;
+    color: #007bff !important;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: -5px
+}
+
+.notifications_badge {
+    opacity: 1;
+    z-index: 999999;
+    left: 23px;
+    top: 29px;
+    position: absolute;
+} */
+
+.notifications_btn {
+    border: 0px !important;
+    right: auto;
+    box-shadow: 0px 0px 15px 0px rgb(72 73 121 / 15%);
+    background: white !important;
+    border-radius: 50%;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    left: -5px;
+}
+
+.notifications_btn button:first-of-type,
+.notifications_btn button:first-of-type:hover,
+.notifications_btn button:first-of-type:active {
+    border: none !important;
+    background: white !important;
+    color: #007bff !important;
+    padding: 5px 10px;
+    font-size: 20px;
+    /* width: 50px;
+  height: 50px; */
+    padding: 0;
+}
+
+.notifications_btn .dropdown-menu {
+    padding: 0;
+    transform: translate3d(0, 0, 0px) !important;
+}
+
+@media (max-width: 767px) {
+    .notifications_btn .dropdown-menu {
+        transform: translate3d(400px, 0, 0px) !important;
+    }
+}
+
+
+.notifications_badge {
+    right: 25px;
+    right: auto;
+    padding: 1px 4px;
+    top: 30px;
+    opacity: 1;
+    z-index: 999999;
+    position: absolute;
+}
+
+
+.price-list {
+    padding-right: 8%;
+}
+
+.lh-3 {
+    line-height: 3em;
+}
+
+/* start input month in home */
+#switch-case input:checked+.label_ar:after {
+    left: calc(43% - 0px);
+}
+
+#switch-case .label_ar:after {
+    left: calc(59% - 0px);
+}
+
+#switch-case .labell:after {
+    position: absolute;
+    top: 5px;
+    left: calc(9% - 0px);
+}
+
+/* end input month in home*/

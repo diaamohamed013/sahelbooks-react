@@ -1,0 +1,296 @@
+body {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+.btn+.btn {
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.fullscreen-banner .img-side {
+    left: -6%;
+    right: auto;
+}
+
+.text-right {
+    text-align: left !important;
+}
+
+.text-left {
+    text-align: right !important;
+}
+
+@media (min-width: 992px) {
+    .text-lg-center {
+        text-align: center !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .text-md-center {
+        text-align: center !important;
+    }
+}
+
+.text-center .title-effect {
+    left: 50%;
+    margin-left: -25px;
+}
+
+#mc-form .btn {
+    right: 5px;
+    left: auto !important;
+}
+
+.work-process.style-2 .step-num-box {
+    margin-left: auto;
+    margin-right: 30px !important;
+}
+
+.step-num {
+    right: auto !important;
+    left: 0;
+}
+
+.accordion .card-header a span {
+    left: auto !important;
+    right: 30px;
+}
+
+/* start edit banner home */
+.rowBannerB {
+    text-align: left !important;
+}
+
+.rowBanner_logo {
+    margin-right: 7%;
+}
+
+.font {
+    font-size: 49px !important;
+}
+
+/* .rowBanner_logo{
+    margin-top: 4%!important;
+} */
+.rowBanner_logo_en {
+    margin-right: 2%;
+}
+
+.head1-en {
+    right: 27px;
+    margin-left: 6%;
+    margin-bottom: 4%;
+    padding-bottom: 6%;
+}
+
+.containerBanner .rowBanner .rowBanner_head1 {
+    right: 20px !important;
+}
+
+.containerBanner .rowBanner div.rowBanner_logo h2 span {
+    margin-right: 0px !important;
+}
+
+.question .card .card-body {
+    padding: 10px 0px 20px 45px;
+}
+
+
+/* New Blog Page English Lang */
+.search__input {
+    padding-left: 14px;
+    padding-right: unset;
+}
+
+.search__button {
+    right: -8px;
+    left: unset;
+}
+
+.emailCard .submitBtn, .mobScreenView a i {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+.lastPost .lastPostItem {
+    padding-right: 20px;
+    padding-left: unset;
+}
+
+.newPosts_Head {
+    border-left: 3px solid #333;
+    border-right: unset;
+}
+
+.contact_box .checkBox label::before, .login-box-body .checkbox label::before {
+    right: unset;
+    left: 0;
+}
+
+.contact_box .checkBox input[type="radio"]:checked+label::after {
+    left: 4px;
+    right: unset;
+}
+
+.login-box-body .checkbox input[type="checkbox"]:checked+label::after {
+    left: 2px;
+    right: unset;
+}
+
+.pass_eye {
+    left: unset;
+    right: 15px;
+}
+
+.back_login_page .fa-arrow-left {
+    display: inline-block;
+}
+
+.back_login_page .fa-arrow-right {
+    display: none;
+}
+
+/* .lastPost .postTop {
+    padding-right: unset;
+    border-right: unset;
+    padding-left: 20px;
+    border-left: 1px solid #828893;
+} */
+
+.navBlog_links .searchBox .search_openBtn, .navBlog_links .searchBox .search_closeBtn {
+    left: 0px;
+}
+
+.navBlog_links .searchBox .search_openBtn.active {
+    left: 89%;
+}
+
+.navBlog_links .searchBox input {
+    padding: 0 60px 0 20px;
+}
+
+.navBlog_links .searchBox .search_closeBtn.active {
+    left: -33px;
+    right: unset;
+}
+
+.fetOptions .owl-carousel .owl-nav, .client .owl-carousel .owl-nav {
+    flex-direction: row-reverse;
+}
+
+.fetOptions .owl-carousel .owl-nav button, .client .owl-carousel .owl-nav button, .tabFetSection .arrowBox .arrowBox_btn i {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+.client .card p {
+    direction: ltr;
+}
+
+.arrow>img {
+    transform: rotate(0deg) !important;
+    -webkit-transform: rotate(0deg) !important;
+    -moz-transform: rotate(0deg) !important;
+    -ms-transform: rotate(0deg) !important;
+    -o-transform: rotate(0deg) !important;
+}
+
+.sigInText {
+    border-left: 1px solid #333;
+    padding-left: .5rem;
+    border-right: unset;
+    padding-right: unset;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    padding-right: .5rem !important;
+    padding-left: unset !important;
+}
+
+.detPar {
+    border-left: 2px solid #B94400 !important;
+    border-right: unset !important;
+}
+
+.searchIcon_holder i {
+    right: 15px;
+    left: unset !important;
+}
+
+.fullDetails .detail .payment ol li {
+    margin-left: 50px !important;
+    margin-right: unset !important;
+}
+
+.fullDetails .detail .payment ol li::before {
+    float: left !important;
+    margin-left: -50px !important;
+    margin-right: unset !important;
+}
+
+.card_headerCenter a i {
+    margin-right: 10px;
+    margin-left: unset;
+}
+
+.contact_box .checkBox label {
+    padding-left: 30px;
+}
+
+.contact_box .checkBox label::before {
+    left: 0;
+}
+
+.contact_box .checkBox input[type="checkbox"]:checked+label::after {
+    left: 4px;
+}
+
+.post .post-desc .post-meta .fa-arrow-right, .aboutInv_help .helpCenter_cursor .fa-arrow-right {
+    display: inline-block;
+}
+
+.post .post-desc .post-meta .fa-arrow-left, .aboutInv_help .helpCenter_cursor .fa-arrow-left {
+    display: none;
+}
+
+/* media query */
+
+@media screen and (min-width: 2112px) {
+    .logo img#logo-white-img, .logo img#logo-img {
+        right: unset !important;
+        left: 30px !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .rowBanner_logo {
+        margin-right: unset !important;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .containerBanner .rowBanner .rowBanner_head1 {
+        right: 10px !important;
+    }
+}
+
+/* end edit banner home */
+
+/* national_day_price_offer */
+.nationalDay_price_offer {
+    right: -17px;
+    left: unset;
+    transform: rotate(-315deg);
+    -webkit-transform: rotate(-315deg);
+    -moz-transform: rotate(-315deg);
+    -ms-transform: rotate(-315deg);
+    -o-transform: rotate(-315deg);
+}

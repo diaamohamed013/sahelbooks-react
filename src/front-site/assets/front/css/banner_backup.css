@@ -1,0 +1,1369 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+
+@font-face {
+    font-family: cairoBold;
+    src: url("../fonts/cairo-bold.ttf");
+    font-display: swap;
+}
+
+.p2 {
+    display: none;
+}
+
+.popUp_cookies {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 95%;
+    background: linear-gradient(135deg, #6a99cf 0%, #8865b5 100%);
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 2.5%;
+    z-index: 100;
+}
+
+.popUp_cookies button {
+    padding: 5px;
+    background-color: #136acd;
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid #136acd;
+}
+
+/*
+ {
+  font-family: cairoBold;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*/
+a {
+    text-decoration: none;
+}
+
+.containerBanner {
+    /* min-height: 100vh; */
+    background: #fff;
+    /* padding: 100px 20px; */
+    /* width: 1250px; */
+}
+
+.containerBanner .layoutFet {
+    position: relative;
+}
+
+.containerBanner .layoutFet .pageHead_img {
+    top: 55px;
+}
+
+.containerBanner .homeBanner_text {
+    font-size: 35px;
+    color: #333;
+    text-align: center;
+    line-height: 1.9;
+}
+
+.containerBanner .homeBanner_text strong {
+    color: #B94400;
+}
+
+.containerBanner .homeBanner_text strong.brush-underline {
+    position: relative;
+}
+
+.containerBanner .homeBanner_text strong.brush-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 20px;
+    background: url('../images/Vector.webp') no-repeat center bottom;
+    background-size: contain;
+    pointer-events: none;
+}
+
+/* .imgHome_mobile {
+    display: none;
+} */
+
+.form-control-input {
+    display: block;
+    min-height: 3rem;
+    width: 70%;
+    font-size: 14px;
+    color: #333;
+    border: 0.0625rem solid transparent;
+    background: #fff;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.form-control-input:focus {
+    outline: unset;
+}
+
+.containerBanner .rowBanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 50%;
+    flex-basis: 50%;
+    margin: auto;
+}
+
+.containerBanner .rowBanner .rowBanner_head1 {
+    position: relative;
+    top: 34px;
+    right: 130px;
+}
+
+.containerBanner .rowBanner:nth-child(2) {
+    margin-top: 165px;
+    max-width: 100%;
+    flex-basis: 100%;
+}
+
+.containerBanner .rowBanner:nth-child(2) p {
+    width: 54%;
+    margin: auto;
+}
+
+.containerBanner .rowBanner div h1 {
+    color: #e6e9ff;
+    line-height: 1.3;
+    font-family: cairoBold !important;
+}
+
+.containerBanner .rowBanner div h1:nth-child(1) {
+    font-size: 40px;
+}
+
+.containerBanner .rowBanner div h1:nth-child(2) {
+    font-size: 40px;
+}
+
+.containerBanner .rowBanner div h1:nth-child(3) {
+    font-size: 70px;
+}
+
+.containerBanner .rowBanner div h2 {
+    font-size: 30px;
+    color: #B94400;
+}
+
+.containerBanner .rowBanner div h2:nth-child(1) {
+    line-height: 1.1;
+}
+
+.containerBanner .rowBanner div h2 span {
+    color: #0315af;
+    font-family: "cairoBold" !important;
+}
+
+.containerBanner .rowBanner div h2 strong {
+    font-family: "cairoBold" !important;
+}
+
+.containerBanner .rowBanner div h2 span.r_span {
+    position: relative;
+    left: 15px;
+    font-family: "Cairo", sans-serif !important;
+}
+
+.containerBanner .rowBanner div img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transform: scale(2.5);
+}
+
+.containerBanner .rowBanner p {
+    color: #fff;
+    font-size: 17px;
+    margin: auto;
+    text-align: center;
+}
+
+.containerBanner .rowBanner div.btn_rowBanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.containerBanner .rowBanner div.btn_rowBanner a {
+    padding: 10px 20px;
+    background-color: #efe8e8;
+    color: #333;
+    font-weight: 600;
+    border-radius: 3px;
+    font-family: "Cairo", sans-serif;
+}
+
+.containerBanner .rowBanner div.btn_rowBanner p.btn_p_text {
+    margin-top: 20px;
+    font-family: "Cairo", sans-serif;
+    color: #e6e9ff;
+}
+
+.containerBanner .rowBanner div.btn_rowBanner a:hover {
+    background-color: #fff;
+}
+
+.navbarContainer {
+    max-width: 1250px !important
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    /*.container {
+    max-width: 1350px !important;
+  }*/
+    .containerBanner {
+        background-size: cover;
+        background-position: 55%;
+    }
+
+    .containerBanner .rowBanner {
+        max-width: 100%;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .containerBanner .rowBanner div h1 {
+        color: #e6e9ff;
+    }
+
+    .containerBanner .rowBanner div img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        transform: scale(1);
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(1) {
+        font-size: 42px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(2) {
+        font-size: 28px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(3) {
+        font-size: 45px;
+    }
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        right: 0px;
+        top: 66px;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo {
+        position: relative;
+        display: none;
+        left: 0px;
+    }
+
+    .containerBanner .rowBanner div h2 span.r_span {
+        left: 10px;
+    }
+
+    .p2 {
+        display: block;
+    }
+
+    .p1 {
+        display: none;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo h2:nth-child(1) {
+        font-size: 22px;
+        line-height: 1;
+    }
+
+    .containerBanner .rowBanner div h2 {
+        font-size: 20px;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) {
+        /* margin-top: 200px; */
+        max-width: 100%;
+        flex-basis: 100%;
+        position: relative;
+        top: 0px;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner {
+        width: 100%;
+    }
+
+    .containerBanner .rowBanner p {
+        color: #fff;
+        font-size: 13px;
+        margin: auto;
+        font-weight: 600;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner a {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner p.btn_p_text {
+        display: none;
+        margin-top: 10px;
+        font-weight: 100;
+        text-align: center;
+        font-size: 11px;
+    }
+
+    .form-control-input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .containerBanner .rowBanner:first-of-type {
+        margin-top: 65% !important;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .containerBanner .rowBanner {
+        margin-top: 120px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .containerBanner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .containerBanner .rowBanner {
+        margin-top: unset !important;
+        flex-basis: auto !important;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    /*.container {
+    max-width: 1350px !important;
+  }*/
+    .containerBanner {
+        background-size: cover;
+        background-position: 55%;
+    }
+
+    .containerBanner .rowBanner div h1 {
+        color: #e6e9ff;
+    }
+
+    .containerBanner .rowBanner div img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        transform: scale(1);
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(1) {
+        font-size: 45px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(2) {
+        font-size: 35px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(3) {
+        font-size: 60px;
+    }
+
+    .containerBanner .rowBanner {
+        max-width: 95%;
+        flex-basis: 95%;
+    }
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        right: 30px;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo {
+        position: relative;
+        top: -20px;
+        left: 0px;
+    }
+
+    .containerBanner .rowBanner div h2 span.r_span {
+        left: 5px;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo h2:nth-child(1) {
+        font-size: 32px;
+        line-height: 1;
+    }
+
+    .containerBanner .rowBanner div h2 {
+        font-size: 30px;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) {
+        /* margin-top: 300px; */
+        max-width: 95%;
+        flex-basis: 95%;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        /* width: 100%; */
+        text-align: right;
+        margin: 0;
+        font-size: 11px;
+        right: 30px;
+        position: relative;
+    }
+
+    .containerBanner .rowBanner p {
+        color: #fff;
+        font-size: 15px;
+        margin: auto;
+        font-weight: 600;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner a {
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner p.btn_p_text {
+        margin-top: 10px;
+        font-weight: 100;
+        font-size: 11px;
+    }
+}
+
+@media (max-width:912px) {
+    .containerBanner .rowBanner .rowBanner_head1 {
+        top: 22px;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        width: 59%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    /*.container {
+    max-width: 1350px !important;
+  }*/
+    .containerBanner {
+        background-size: cover;
+    }
+
+    .containerBanner .rowBanner div h1 {
+        color: #e6e9ff;
+        text-shadow: 0px 0px 3px #464445;
+    }
+
+    .containerBanner .rowBanner div img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        transform: scale(1.5);
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(1) {
+        font-size: 40px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(2) {
+        font-size: 40px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(3) {
+        font-size: 70px;
+    }
+
+    .containerBanner .rowBanner {
+        max-width: 95%;
+        flex-basis: 95%;
+    }
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        right: 25px;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo {
+        position: relative;
+        left: 0px;
+    }
+
+    .containerBanner .rowBanner div h2 span.r_span {
+        left: 10px;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo h2:nth-child(1) {
+        font-size: 42px;
+        line-height: 2;
+    }
+
+    .containerBanner .rowBanner div h2 {
+        font-size: 40px;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) {
+        /* margin-top: 250px; */
+        max-width: 95%;
+        flex-basis: 95%;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        /* width: 100%; */
+        margin: 0 20px 0 0;
+        text-align: right;
+        font-size: 14px;
+    }
+
+    .containerBanner .rowBanner p {
+        color: #fff;
+        font-size: 16px;
+        margin: auto;
+        font-weight: 600;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner a {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner p.btn_p_text {
+        margin-top: 10px;
+        font-weight: 100;
+        text-align: center;
+        font-size: 12px;
+        width: 100%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    /*.container {
+    max-width: 1250px !important;
+  }*/
+    .containerBanner {
+        background-size: cover;
+    }
+
+    .containerBanner .rowBanner div h1 {
+        color: #e6e9ff;
+        text-shadow: 0px 0px 3px #464445;
+    }
+
+    .containerBanner .rowBanner div img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        transform: scale(2);
+    }
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        position: relative;
+        /* top: 35px; */
+        right: 0;
+    }
+
+    .containerBanner .rowBanner div.rowBanner_logo {
+        position: relative;
+        bottom: 60px;
+        left: 30px;
+    }
+
+    .containerBanner .rowBanner div h2 span.r_span {
+        left: 10px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(1) {
+        font-size: 50px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(2) {
+        font-size: 50px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(3) {
+        font-size: 90px;
+    }
+
+    .containerBanner .rowBanner {
+        max-width: 95%;
+        flex-basis: 95%;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo h2:nth-child(1) {
+        font-size: 42px;
+        line-height: 1;
+    }
+
+    .containerBanner .rowBanner div h2 {
+        font-size: 40px;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) {
+        /* margin-top: 150px; */
+        max-width: 90%;
+        flex-basis: 90%;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        width: 43%;
+        margin: 0 20px 0 0;
+        font-size: 16px;
+        text-align: right;
+    }
+
+    .containerBanner .rowBanner p {
+        color: #fff;
+        font-size: 16px;
+        margin: auto;
+        font-weight: 600;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner a {
+        padding: 10px 100px;
+        font-size: 16px;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner p.btn_p_text {
+        margin-top: 10px;
+        font-weight: 100;
+        text-align: center;
+        font-size: 13px;
+        width: 100%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    /*.container {
+    max-width: 1350px !important;
+  }*/
+    .containerBanner {
+        background-size: cover;
+    }
+
+    .containerBanner .rowBanner div h1 {
+        color: #e6e9ff;
+        text-shadow: 0px 0px 3px #464445;
+    }
+
+    .containerBanner .rowBanner div img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        transform: scale(2.5);
+    }
+
+    .containerBanner .rowBanner div.rowBanner_logo {
+        position: relative;
+        bottom: 60px;
+        left: 70px;
+    }
+
+    .containerBanner .rowBanner div h2:nth-child(2) {
+        font-size: 53px;
+    }
+
+    .containerBanner .rowBanner div.rowBanner_logo h2 span {
+        margin-right: -5px;
+    }
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        position: relative;
+        /* top: 60px; */
+        /* right: 130px; */
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(1) {
+        font-size: 55px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(2) {
+        font-size: 55px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(3) {
+        font-size: 100px;
+    }
+
+    .containerBanner .rowBanner {
+        max-width: 95%;
+        flex-basis: 95%;
+    }
+
+    .containerBanner .rowBanner div h2:nth-child(1) {
+        line-height: 1.9;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo h2:nth-child(1) {
+        font-size: 57px;
+    }
+
+    .containerBanner .rowBanner div h2 {
+        font-size: 55px;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) {
+        /* margin-top: 300px; */
+        max-width: 85%;
+        flex-basis: 80%;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        width: 35%;
+        margin: 0 20px 0 0;
+        font-size: 14px;
+        text-align: right;
+    }
+
+    .containerBanner .rowBanner p {
+        color: #fff;
+        font-size: 16px;
+        margin: auto;
+        font-weight: 600;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner a {
+        padding: 10px 100px;
+        font-size: 16px;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner p.btn_p_text {
+        margin-top: 10px;
+        font-weight: 100;
+        text-align: center;
+        font-size: 13px;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1248px) {
+    /* .containerBanner .rowBanner:nth-child(2) {
+        margin-top: 200px;
+    } */
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        right: 50px;
+    }
+
+    .containerBanner .rowBanner div.rowBanner_logo {
+        left: 30px;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        width: 47%;
+    }
+}
+
+@media only screen and (min-width: 1344px) {
+
+    /*.container {
+    max-width: 1170px !important;
+  }*/
+    /* .containerBanner .rowBanner:nth-child(2) {
+        margin-top: 200px;
+    } */
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        right: 100px;
+    }
+
+    .containerBanner .rowBanner div.rowBanner_logo {
+        left: 40px;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    /*.container {
+    max-width: 1250px !important;
+  }*/
+    /* .containerBanner .rowBanner:nth-child(2) {
+        margin-top: 200px;
+    } */
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        right: 100px;
+    }
+
+    .containerBanner .rowBanner div.rowBanner_logo {
+        left: 50px;
+    }
+}
+
+@media only screen and (min-width: 1536px) {
+
+    /*.container {
+    max-width: 1340px !important;
+  }*/
+    .containerBanner {
+        background-position-y: top;
+    }
+
+    /* .containerBanner .rowBanner:nth-child(2) {
+        margin-top: 250px;
+    } */
+}
+
+@media only screen and (min-width: 1632px) {
+
+    /*.container {
+    max-width: 1440px !important;
+  }*/
+    /* .containerBanner .rowBanner:nth-child(2) {
+        margin-top: 550px;
+    } */
+}
+
+@media only screen and (min-width: 1920px) {
+    /* .container {
+    max-width: 1700px !important;
+  }*/
+}
+
+@media only screen and (min-width: 2016px) {
+
+    /*.container {
+    max-width: 1700px !important;
+  }*/
+    /* .containerBanner .rowBanner:nth-child(2) {
+        margin-top: 350px;
+    } */
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        font-size: 20px;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner a {
+        font-size: 20px;
+    }
+
+    /*.container {
+    max-width: 1850px !important;
+  }*/
+    /* .navbar {
+        padding: 10px 20px !important;
+    } */
+
+    .navbar-nav .nav-link {
+        font-size: 15px;
+    }
+
+    .logo img#logo-white-img {
+        height: 50px;
+        position: relative;
+        right: 30px !important;
+        transform: scale(1.5) !important;
+        -webkit-transform: scale(1.5) !important;
+        -moz-transform: scale(1.5) !important;
+        -ms-transform: scale(1.5) !important;
+        -o-transform: scale(1.5) !important;
+    }
+
+    .btn.btn-theme {
+        font-size: 10px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(1) {
+        font-size: 70px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(2) {
+        font-size: 50px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(3) {
+        font-size: 100px;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo h2:nth-child(1) {
+        font-size: 40px;
+    }
+
+    .containerBanner .rowBanner div h2:nth-child(2) {
+        font-size: 40px;
+        line-height: 1;
+    }
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        right: 125px;
+        top: 65px;
+    }
+
+    .containerBanner .rowBanner div.rowBanner_logo {
+        left: 45px;
+    }
+
+    .logo img#logo-img {
+        transform: scale(1.5) !important;
+        position: relative;
+        right: 5px !important;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 2112px) {
+    /* .containerBanner .rowBanner:nth-child(2) {
+        margin-top: 350px;
+    } */
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        font-size: 20px;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner a {
+        font-size: 20px;
+    }
+
+    /*.container {
+    max-width: 1850px !important;
+  }*/
+    .navbarContainer {
+        max-width: 1700px !important;
+    }
+
+    .navbar {
+        padding: 25px 20px !important;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 20px;
+    }
+
+    .logo img#logo-white-img {
+        height: 50px;
+        position: relative;
+        right: 30px !important;
+        /* transform: scale(2) !important;
+        -webkit-transform: scale(2) !important;
+        -moz-transform: scale(2) !important;
+        -ms-transform: scale(2) !important;
+        -o-transform: scale(2) !important; */
+    }
+
+    .btn.btn-theme {
+        font-size: 15px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(1) {
+        font-size: 70px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(2) {
+        font-size: 70px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(3) {
+        font-size: 100px;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo h2:nth-child(1) {
+        font-size: 60px;
+    }
+
+    .containerBanner .rowBanner div h2:nth-child(2) {
+        font-size: 50px;
+        line-height: 1;
+    }
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        right: 150px;
+        top: 75px;
+    }
+
+    .containerBanner .rowBanner div.rowBanner_logo {
+        left: 75px;
+    }
+
+    .logo img#logo-img {
+        /* transform: scale(2) !important; */
+        position: relative;
+        right: 15px !important;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        width: 50%;
+    }
+
+    .containerBanner {
+        background-position-y: center;
+    }
+}
+
+@media only screen and (min-width: 2208px) {
+    /* .containerBanner .rowBanner:nth-child(2) {
+        margin-top: 450px;
+    } */
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        font-size: 30px;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner a {
+        font-size: 40px;
+    }
+
+    /*.container {
+    max-width: 1950px !important;
+  }*/
+    /* .navbar {
+        padding: 25px 20px !important;
+    } */
+
+    .navbar-nav .nav-link {
+        font-size: 25px;
+    }
+
+    .logo img#logo-white-img {
+        height: 50px;
+        position: relative;
+        right: 70px !important;
+        /* transform: scale(3) !important; */
+    }
+
+    .btn.btn-theme {
+        font-size: 20px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(1) {
+        font-size: 120px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(2) {
+        font-size: 100px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(3) {
+        font-size: 200px;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo h2:nth-child(1) {
+        font-size: 100px;
+    }
+
+    .containerBanner .rowBanner div h2:nth-child(2) {
+        font-size: 90px;
+        line-height: 1;
+    }
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        right: 80px;
+        top: 115px;
+    }
+
+    .containerBanner .rowBanner div.rowBanner_logo {
+        left: 45px;
+    }
+
+    .logo img#logo-img {
+        /* transform: scale(2.5) !important; */
+        position: relative;
+        right: 20px !important;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        width: 53%;
+    }
+}
+
+@media only screen and (min-width: 2304px) {
+    /*.container {
+    max-width: 2050px !important;
+  }*/
+}
+
+/* @media only screen and (min-width: 2304px) {
+  .containerBanner .rowBanner:nth-child(2) {
+    margin-top: 450px;
+  }
+  .containerBanner .rowBanner:nth-child(2) p {
+    font-size: 25px;
+  }
+  .containerBanner .rowBanner div.btn_rowBanner a {
+    font-size: 20px;
+  }
+  .container {
+    max-width: 2050px !important;
+  }
+  .navbar {
+    padding: 25px 20px !important;
+  }
+  .navbar-nav .nav-link {
+    font-size: 25px;
+  }
+  .logo img#logo-white-img {
+    height: 50px;
+    transform: scale(3) !important;
+    position: relative;
+    right: 70px !important;
+  }
+  .btn.btn-theme {
+    font-size: 20px;
+  }
+  .containerBanner .rowBanner div h1:nth-child(1) {
+    font-size: 70px;
+  }
+  .containerBanner .rowBanner div h1:nth-child(2) {
+    font-size: 70px;
+  }
+  .containerBanner .rowBanner div h1:nth-child(3) {
+    font-size: 100px;
+  }
+  .containerBanner .rowBanner .rowBanner_logo h2:nth-child(1) {
+    font-size: 50px;
+  }
+  .containerBanner .rowBanner div h2:nth-child(2) {
+    font-size: 40px;
+    line-height: 1;
+  }
+  .containerBanner .rowBanner .rowBanner_head1 {
+    right: 150px;
+    top: 75px;
+  }
+  .containerBanner .rowBanner div.rowBanner_logo {
+    left: 135px;
+  }
+  .logo img#logo-img {
+    transform: scale(2.5) !important;
+    position: relative;
+    right: 20px !important;
+  }
+  .containerBanner .rowBanner:nth-child(2) p {
+    width: 50%;
+  }
+} */
+
+@media only screen and (min-width: 2496px) {
+    /* .containerBanner .rowBanner:nth-child(2) {
+        margin-top: 550px;
+    } */
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        font-size: 30px;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner a {
+        font-size: 40px;
+    }
+
+    /* .container {
+    max-width: 2250px !important;
+  }*/
+    /* .navbar {
+        padding: 25px 20px !important;
+    } */
+
+    .navbar-nav .nav-link {
+        font-size: 25px;
+    }
+
+    .logo img#logo-white-img {
+        height: 50px;
+        position: relative;
+        right: 70px !important;
+        /* transform: scale(3) !important; */
+    }
+
+    .btn.btn-theme {
+        font-size: 20px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(1) {
+        font-size: 120px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(2) {
+        font-size: 100px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(3) {
+        font-size: 200px;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo h2:nth-child(1) {
+        font-size: 100px;
+    }
+
+    .containerBanner .rowBanner div h2:nth-child(2) {
+        font-size: 90px;
+        line-height: 1;
+    }
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        right: 150px;
+        top: 115px;
+    }
+
+    .containerBanner .rowBanner div.rowBanner_logo {
+        left: 90px;
+    }
+
+    .logo img#logo-img {
+        /* transform: scale(2.5) !important; */
+        position: relative;
+        right: 20px !important;
+    }
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 2592px) {
+    /* .containerBanner .rowBanner:nth-child(2) {
+        margin-top: 1350px;
+    } */
+
+    .containerBanner .rowBanner:nth-child(2) p {
+        font-size: 30px;
+    }
+
+    .containerBanner .rowBanner div.btn_rowBanner a {
+        font-size: 40px;
+    }
+
+    /*.container {
+    max-width: 2250px !important;
+  }*/
+    /* .navbar {
+        padding: 25px 20px !important;
+    } */
+
+    .navbar-nav .nav-link {
+        font-size: 25px;
+    }
+
+    .logo img#logo-white-img {
+        height: 50px;
+        position: relative;
+        right: 70px !important;
+        /* transform: scale(3) !important; */
+    }
+
+    .btn.btn-theme {
+        font-size: 20px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(1) {
+        font-size: 120px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(2) {
+        font-size: 100px;
+    }
+
+    .containerBanner .rowBanner div h1:nth-child(3) {
+        font-size: 200px;
+    }
+
+    .containerBanner .rowBanner .rowBanner_logo h2:nth-child(1) {
+        font-size: 100px;
+    }
+
+    .containerBanner .rowBanner div h2:nth-child(2) {
+        font-size: 90px;
+        line-height: 1;
+    }
+
+    .containerBanner .rowBanner .rowBanner_head1 {
+        right: 150px;
+        top: 135px;
+    }
+
+    .containerBanner .rowBanner div.rowBanner_logo {
+        left: 90px;
+    }
+
+    .logo img#logo-img {
+        /* transform: scale(2.5) !important; */
+        position: relative;
+        right: 20px !important;
+    }
+}
+
+@media only screen and (min-height: 1728px) {
+    /* .containerBanner .rowBanner:nth-child(2) {
+        margin-top: 1050px;
+    } */
+}
+
+/* @media only screen and (min-height: 1000px) {
+    .containerBanner .rowBanner:nth-child(2) {
+        margin-top: 250px;
+    }
+} */
+
+@media screen and (max-width:991px) {
+    .containerBanner_fullScreen .form-control-input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    /* .imgHome_mobile {
+        display: block;
+        text-align: center;
+    } */
+
+    /* .imgHome_fullScreen {
+            display: none;
+        } */
+
+    /* .containerBanner_fullScreen img {
+            width: 40% !important;
+            object-fit: cover;
+        } */
+
+    /* .containerBanner_mobile .homeBanner_text {
+        text-align: center;
+    } */
+
+    .containerBanner_mobile .homeBanner_text {
+        font-size: 25px;
+    }
+
+    .containerBanner_mobile p.homeTop_content {
+        font-size: 16px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,11 @@
+@media (max-width: 767px) {
+    .iti__country-list {
+        /* position: fixed !important; */
+        max-height: 50vh !important;
+        overflow-y: auto !important;
+        z-index: 999999 !important;
+        width: fit-content !important;
+        left: 35px;
+        right: 35px;
+    }
+}

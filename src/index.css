@@ -1,0 +1,98 @@
+#switch-case input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+#switch-case label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: grey;
+  display: inline;
+  border-radius: 100px;
+  position: relative;
+}
+
+#switch-case label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+html[dir="rtl"] #switch-case label:after {
+  right: 5px;
+}
+
+html[dir="ltr"] #switch-case label:after {
+  left: 5px;
+}
+
+#switch-case input:checked+label {
+  background: #B94400;
+}
+
+#switch-case input:checked+label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+#switch-case label:active:after {
+  width: 50px;
+}
+
+.navbar-nav a .sub-arrow::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* .accordion .card-header a span::before,
+        .accordion .card-header a span::after {
+            width: 20px;
+            height: 2px;
+            background: #333;
+        } */
+
+#cookie-msg {
+  z-index: 500;
+}
+
+@media (max-width: 1024px) {
+  #cookie-msg {
+    width: 90% !important;
+  }
+}
+
+.post-title:after {
+  display: none;
+}
+
+/* Pw-strength */
+
+#passwordHelp {
+  font-size: 85%;
+}
+
+.js-hidden {
+  display: none !important;
+}
+
+.input-group-append {
+  margin-left: -1px;
+}
+
+.btn-outline-secondary {
+  color: #F3969A;
+  border-color: #F3969A;
+  border: 1px solid;
+}

@@ -1,6 +1,6 @@
-import TranslationProvider from "./TranslationProvider";
-import Header from '../src/front-site/components/layouts/Header';
-import Footer from '../src/front-site/components/layouts/Footer';
+import TranslationProvider from "./front-site/components/TranslationProvider";
+import Header from './front-site/components/layouts/Header';
+import Footer from './front-site/components/layouts/Footer';
 import { Outlet } from "react-router-dom";
 
 export default function MainLayout() {
@@ -12,7 +12,7 @@ export default function MainLayout() {
                     <main>
                         <Outlet context={{ t }} />
                     </main>
-                    <Footer t={t} i18n={i18n} />
+                    <Footer t={t}  /> {/*  i18n={i18n} */}
                 </>
             )}
         </TranslationProvider>

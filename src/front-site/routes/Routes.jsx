@@ -1,13 +1,20 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import App from "../../AppWrapper";
+import MainLayout from "../../MainLayout";
+import Home from "../pages/home/Home";
 
-export const router = createBrowserRouter([{
-    path: '/',
-    element: <App />,
-    children: [
-        {
-            path: '/',
-            element: <Navigate to='/home'/>
-        }
-    ]
-}])
+export const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <MainLayout />,
+        children: [
+            {
+                index: true,
+                element: <Navigate to="/home" />,
+            },
+            {
+                path: 'home',
+                element: <Home />, // ✅ هنا بتتعرض الصفحة داخل MainLayout
+            }
+        ]
+    }
+]);

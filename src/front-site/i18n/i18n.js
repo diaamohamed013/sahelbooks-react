@@ -1,13 +1,13 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import ar from "./translations/ar.json";
-import en from "./translations/en.json";
+import en from "../i18n/en/common.json";
+import ar from "../i18n/ar/common.json";
 
 i18n.use(initReactI18next).init({
     resources: {
-        ar: { translation: ar },
-        en: { translation: en }
+        en: { common: en },
+        ar: { common: ar },
     },
     lng: "ar",
     fallbackLng: "en",

@@ -2,14 +2,14 @@ import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 
 // ✅ Import Assets using Vite bundling (No public folder)
-import Favicon from "../assets/front/images/favicon.png";
-import PreloadVector from "../assets/front/images/Vector.webp";
+import Favicon from "../../assets/front/images/favicon.png";
+import PreloadVector from "../../assets/front/images/Vector.webp";
 
 // ✅ CSS Files
-import "../assets/front/css/base.css";
-import "../assets/front/css/style.css";
-import "../assets/front/css/sahel.css";
-import "../assets/front/css/shortcodes.css";
+import "../../assets/front/css/base.css";
+import "../../assets/front/css/style.css";
+import "../../assets/front/css/sahel.css";
+import "../../assets/front/css/shortcodes.css";
 
 // ✅ We'll conditionally load this
 // import "../assets/front/css/custom-ltr.css";
@@ -18,10 +18,15 @@ export default function Head({ title, description, keywords, image }) {
 
     // ✅ Add custom-ltr.css only if language = English
     useEffect(() => {
-        if (document.documentElement.dir === "ltr") {
-            import("../assets/front/css/custom-ltr.css");
+        if (window.grecaptcha) {
+            window.grecaptcha.ready(() => {
+                window.grecaptcha.execute("YOUR_RECAPTCHA_SITE_KEY", { action: "submit" });
+            });
         }
-        import("../assets/front/js/device.min.js");
+        if (document.documentElement.dir === "ltr") {
+            import("../../assets/front/css/custom-ltr.css");
+        }
+        import("../../assets/front/js/device.min.js");
     }, []);
 
     const currentUrl = typeof window !== "undefined" ? window.location.href : "";
@@ -60,8 +65,9 @@ export default function Head({ title, description, keywords, image }) {
                 rel="stylesheet"
             />
             <noscript>
-                <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet" />
+                {`<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet" />`}
             </noscript>
+
 
             {/* ✅ Google Analytics */}
             <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -80,13 +86,12 @@ export default function Head({ title, description, keywords, image }) {
                 async
                 defer
             ></script>
-            <script>
-                {`
-                    grecaptcha.ready(function() {
-                        grecaptcha.execute('YOUR_RECAPTCHA_SITE_KEY', {action: 'submit'});
-                    });
-                `}
-            </script>
+            <script
+                src="https://www.google.com/recaptcha/api.js?render=YOUR_RECAPTCHA_SITE_KEY"
+                async
+                defer
+            ></script>
+
         </Helmet>
     );
 }

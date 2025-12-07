@@ -80,6 +80,13 @@ export default function NavBar() {
                 </span>
               </li>
 
+              {/* eInvoice */}
+              <li className="nav-item">
+                <NavLink to="/e_invoice" className="nav-link">
+                  {t("nav.eInvoice")}
+                </NavLink>
+              </li>
+
               {/* Pricing */}
               <li className="nav-item">
                 <NavLink to="/pricing" className="nav-link">

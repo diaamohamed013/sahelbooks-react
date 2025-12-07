@@ -3,12 +3,16 @@
     "home": "Home",
     "features": "Features",
     "pricing": "Pricing",
+    "eInvoice": "E-Invoice",
     "blogs": "Blogs",
     "contact": "Contact",
     "login": "Login",
     "register": "Register",
     "dashboard": "Dashboard",
     "logout": "Logout"
+  },
+  "contact": {
+    "send": "Send"
   },
   "preview_mode": "User preview mode",
   "hello": "Hello",

@@ -12,7 +12,7 @@ export default function MainLayout() {
                     <main>
                         <Outlet context={{ t }} />
                     </main>
-                    <Footer t={t}  /> {/*  i18n={i18n} */}
+                    {/*<Footer t={t}  />   i18n={i18n} */}
                 </>
             )}
         </TranslationProvider>

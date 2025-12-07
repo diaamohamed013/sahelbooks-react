@@ -1,4 +1,16 @@
 {
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "blogs": "Blogs",
+    "contact": "Contact",
+    "login": "Login",
+    "register": "Register",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "preview_mode": "User preview mode",
   "hello": "Hello",
   "footer_text": "All rights reserved"
 }

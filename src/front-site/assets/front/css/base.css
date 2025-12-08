@@ -1127,7 +1127,7 @@ a#resend-link {
     margin-bottom: 0;
 }
 
-.footer-list li a {
+.footer-list li a, .footer-list li .link-btn {
     position: relative;
     font-size: 16px;
     font-weight: 400;
@@ -1139,7 +1139,13 @@ a#resend-link {
     -o-transition: all .3s;
 }
 
-.footer-list li a:hover {
+.footer-list li .link-btn {
+    outline: 0 !important;
+    padding: 0;
+    border: 0;
+}
+
+.footer-list li a:hover, .footer-list li .link-btn:hover {
     color: #B94400;
 }
 

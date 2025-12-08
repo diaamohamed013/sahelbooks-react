@@ -17,5 +17,25 @@
   },
   "preview_mode": "وضع معاينة المستخدم",
   "hello": "مرحبا",
-  "footer_text": "كل الحقوق محفوظة"
+  "footer_text": "كل الحقوق محفوظة",
+  "front_home": {
+    "newsletter_sub": "اشترك في النشرة البريدية ليصلك كل جديد",
+    "enter_email": "ادخل بريدك الإلكتروني",
+    "newsletter": "النشرة البريدية",
+    "quick_links": "روابط سريعة",
+    "info": "معلومات",
+    "follow_us": "تابعنا",
+    "affiliate": "التسويق بالعمولة",
+    "faqs": "الأسئلة الشائعة",
+    "new_feature": "جديد",
+    "help_center": "مركز المساعدة",
+    "facebook" : "فيس بوك",
+    "instagram": "انستغرام",
+    "twitter": "تويتر",
+    "linkedin": "لينكد ان"
+  },
+  "pages":{
+    "privacy_policy": "سياسة الخصوصية",
+    "terms": "الشروط والأحكام"
+  }
 }

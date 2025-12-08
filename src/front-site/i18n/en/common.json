@@ -16,5 +16,25 @@
   },
   "preview_mode": "User preview mode",
   "hello": "Hello",
-  "footer_text": "All rights reserved"
+  "footer_text": "All rights reserved",
+  "front_home": {
+    "newsletter_sub": "Subscribe to our newsletter to receive the latest updates",
+    "enter_email": "Enter your email address",
+    "newsletter": "Newsletter",
+    "quick_links": "Quick Links",
+    "info": "Information",
+    "follow_us": "Follow Us",
+    "affiliate": "Affiliate Program",
+    "faqs": "FAQs",
+    "new_feature": "New",
+    "help_center": "Help Center",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "linkedin": "LinkedIn"
+  },
+  "pages": {
+    "privacy_policy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  }
 }

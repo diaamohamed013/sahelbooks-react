@@ -50,14 +50,14 @@
   <noscript>
     <link rel="stylesheet" href="./src/front-site/assets/front/css/line-awesome.min.css">
   </noscript>
-
+  <!-- <link rel="stylesheet" href="./src/front-site/assets/front/css/intltelinput.css">
+  <link rel="stylesheet" href="./src/front-site/assets/front/css/intltelinput-override.css"> -->
   <link rel="stylesheet" href="./src/front-site/assets/front/css/base.css">
   <link rel="stylesheet" href="./src/front-site/assets/front/css/style.css">
   <link rel="stylesheet" href="./src/front-site/assets/front/css/sahel.css">
   <link rel="stylesheet" href="./src/front-site/assets/front/css/shortcodes.css">
-  <!-- @if (text_dir() == 'ltr')
-  <link rel="stylesheet" href="{{ asset('front/css/custom-ltr.css') }}">
-  @endif -->
+  <link id="ltr-style" rel="stylesheet" href="./src/front-site/assets/front/css/custom-ltr.css" disabled />
+
 
   <!-- @php
   $cssFiles = [
@@ -104,6 +104,10 @@
     <title>sahelbooks</title> -->
 
   <style>
+    .iti {
+      width: 100%;
+    }
+
     #switch-case input[type=checkbox] {
       height: 0;
       width: 0;
@@ -190,7 +194,7 @@
     }
   </style>
 
-<!-- @if (!empty($settings->google_analytics))
+  <!-- @if (!empty($settings->google_analytics))
 {!! base64_decode($settings->google_analytics) !!}
 @endif -->
 
@@ -242,8 +246,32 @@
 </head>
 
 <body>
+  <div id="go-top" class="iconfont icon-cc-top">
+    <div class="smoothscroll"><i class="fas fa-chevron-up"></i></div>
+  </div>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <script src="./src/front-site/assets/front/js/jquery.js"></script>
+  <script src="./src/front-site/assets/front/js/bootstrap.bundle.min.js"></script>
+  <script src="./src/front-site/assets/front/js/jquery.goTop.js"></script>
+  <script>
+    $(function () {
+
+      $('#go-top').goTop({
+
+        // top offset
+        scrollTop: 100,
+
+        // scroll speed in milliseconds
+        scrollSpeed: 1000,
+
+        // fade in/out speed in milliseconds
+        fadeInSpeed: 500,
+        fadeOutSpeed: 500
+
+      });
+    })
+  </script>
 </body>
 
 </html>

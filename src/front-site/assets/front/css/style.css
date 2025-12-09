@@ -3355,7 +3355,7 @@ img.roundImg {
     -o-transition: max-height .5s;
 }
 
-.selectCategory .categories ul li a {
+.selectCategory .categories ul li a, .selectCategory .categories ul li button {
     padding: 10px 20px;
     display: block;
     font-size: 14px;
@@ -3367,7 +3367,12 @@ img.roundImg {
     -o-transition: all .3s;
 }
 
-.selectCategory .categories ul li a:hover {
+.selectCategory .categories ul li button {
+    border: 0;
+    background: none;
+}
+
+.selectCategory .categories ul li a:hover, .selectCategory .categories ul li button:hover {
     color: #0315AF;
 }
 

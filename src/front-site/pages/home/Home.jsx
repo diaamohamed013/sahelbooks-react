@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { setLang } from "../../i18n/i18n";
+import PhoneInput from "../../components/PhoneInput";
+
 export default function Home() {
   const { t, i18n } = useTranslation("common");
   const currentLang = i18n.language;
@@ -17,7 +19,7 @@ export default function Home() {
                         <i className="fas fa-building"></i>
                       </div>
                       <div className="mediaBody">
-                        <strong>شركة</strong>
+                        <strong>{t("front_home.company")}</strong>
                         <span>سهل بوكس ش.ذ.م.م</span>
                       </div>
                     </div>
@@ -26,7 +28,7 @@ export default function Home() {
                         <i className="fas fa-map-marker"></i>
                       </div>
                       <div className="mediaBody">
-                        <strong>العنوان</strong>
+                        <strong>{t("front_home.address")}</strong>
                         <span>
                           32 مصطفى النحاس، المنطقة السادسة، مدينة نصر القاهرة،
                           جمهورية مصر العربية
@@ -38,7 +40,7 @@ export default function Home() {
                         <i className="fas fa-envelope"></i>
                       </div>
                       <div className="mediaBody">
-                        <strong>البريد الإلكتروني</strong>
+                        <strong>{t("front_home.email")}</strong>
                         <span>
                           <a href="mailto:info@sahelbooks.com">
                             info@sahelbooks.com
@@ -51,9 +53,17 @@ export default function Home() {
                         <i className="fas fa-phone-volume"></i>
                       </div>
                       <div className="mediaBody">
-                        <strong>الهاتف</strong>
+                        <strong>{t("front_home.phone")}</strong>
                         <span>
-                          <a href="tel:+20 112 8468612">+20 112 8468612</a>
+                          <a
+                            href="tel:+20 112 8468612"
+                            style={{
+                              direction: "ltr",
+                              display: "inline-block",
+                            }}
+                          >
+                            +20 112 8468612
+                          </a>
                         </span>
                       </div>
                     </div>
@@ -62,7 +72,7 @@ export default function Home() {
                         <i className="fab fa-whatsapp"></i>
                       </div>
                       <div className="mediaBody">
-                        <strong>واتساب</strong>
+                        <strong>{t("front_home.whatsapp")}</strong>
                         <span>
                           <a href="https://wa.me/966115201525" target="_b">
                             تواصل معنا على واتس آب
@@ -77,12 +87,8 @@ export default function Home() {
                     <div className="row">
                       <div className="col-md-12">
                         <div className="section-title mb-5">
-                          <h2>اتصل بنا</h2>
-                          <p>
-                            للحصول على المزيد من المعلومات حول خدماتنا ومنتجاتنا
-                            أو تقديم شكاية، المرجو التواصل معنا عبر ملء
-                            الاستمارة الآتية
-                          </p>
+                          <h2>{t("nav.contact")}</h2>
+                          <p>{t("front_home.happy_support")}</p>
                         </div>
                       </div>
                       <div className="col-md-12">
@@ -95,30 +101,30 @@ export default function Home() {
                           <div className="row">
                             <div className="col-md-6">
                               <div className="form-group">
-                                <label>الاسم الأول</label>
+                                <label>{t("front_home.first_name")}</label>
                                 <input
                                   id="form_name"
                                   type="text"
                                   name="fname"
                                   className="form-control"
-                                  placeholder="<?php echo trans('front_home.enter-your-fname'); ?>"
+                                  placeholder={t("front_home.enter_fname")}
                                   required="required"
-                                  data-error="<?php echo trans('front_home.enter-your-fname'); ?>"
+                                  data-error={t("front_home.enter_fname")}
                                 />
                                 <div className="help-block with-errors"></div>
                               </div>
                             </div>
                             <div className="col-md-6">
                               <div className="form-group">
-                                <label>الاسم الآخير</label>
+                                <label>{t("front_home.last_name")}</label>
                                 <input
                                   id="form_name"
                                   type="text"
                                   name="lname"
                                   className="form-control"
-                                  placeholder="<?php echo trans('front_home.enter-your-lname'); ?>"
+                                  placeholder={t("front_home.enter_lname")}
                                   required="required"
-                                  data-error="<?php echo trans('front_home.enter-your-lname'); ?>"
+                                  data-error={t("front_home.enter_lname")}
                                 />
                                 <div className="help-block with-errors"></div>
                               </div>
@@ -128,30 +134,30 @@ export default function Home() {
                           <div className="row">
                             <div className="col-md-6">
                               <div className="form-group">
-                                <label>البريد الإلكتروني</label>
+                                <label>{t("front_home.email")}</label>
                                 <input
                                   id="form_email"
                                   type="email"
                                   name="email"
                                   className="form-control"
-                                  placeholder="<?php echo helper_trans('enter-your-email'); ?> "
+                                  placeholder={t("front_home.enter_email")}
                                   required="required"
-                                  data-error="<?php echo helper_trans('enter-email'); ?> "
+                                  data-error={t("front_home.enter_email")}
                                   pattern="[\-a-zA-Z0-9~!$%^&amp;*_=+\}\{'?]+(\.[\-a-zA-Z0-9~!$%^&amp;*_=+\}\{'?]+)*@[a-zA-Z0-9_][\-a-zA-Z0-9_]*(\.[\-a-zA-Z0-9_]+)*\.[cC][oO][mM](:[0-9]{1,5})?"
                                 />
                                 <div className="help-block with-errors"></div>
                               </div>
                             </div>
-                            <div className="col-md-6 ">
+                            {/* <div className="col-md-6 ">
                               <div className="form-group contactPhone">
-                                <label>الهاتف </label>
+                                <label>{t("front_home.phone")} </label>
                                 <input
                                   id="phone_intltelinput"
                                   type="tel"
                                   name="phone"
                                   className="form-control"
-                                  placeholder="<?php echo helper_trans('phone'); ?>  "
-                                  data-error=" <?php echo helper_trans('enter-your-phone'); ?> "
+                                  placeholder={t("front_home.enter_phone")}
+                                  data-error={t("front_home.enter_phone")}
                                   required
                                 />
                                 <span
@@ -166,20 +172,35 @@ export default function Home() {
                                 ></span>
                                 <div className="help-block with-errors"></div>
                               </div>
+                            </div> */}
+                            <div className="col-md-6 ">
+                              <div className="form-group contactPhone">
+                                <label>{t("front_home.phone")} </label>
+                                <PhoneInput
+                                  pageType="Request" // أو "Register"
+                                  onChange={(fullNumber) => {
+                                    console.log(
+                                      "Full phone number:",
+                                      fullNumber
+                                    );
+                                    // هنا تقدر تحط الرقم في state أو form data
+                                  }}
+                                />
+                              </div>
                             </div>
                           </div>
                           <div className="row">
                             <div className="col-md-12">
                               <div className="form-group">
-                                <label>رسالة</label>
+                                <label>{t("front_home.message")}</label>
                                 <textarea
                                   id="form_message"
                                   name="message"
                                   className="form-control"
-                                  placeholder="<?php echo helper_trans('write-your-message'); ?>  "
+                                  placeholder={t("front_home.enter_message")}
                                   rows="4"
                                   required="required"
-                                  data-error="<?php echo helper_trans('write-your-message'); ?> "
+                                  data-error={t("front_home.enter_message")}
                                 ></textarea>
                                 <div className="help-block with-errors"></div>
                               </div>
@@ -193,11 +214,11 @@ export default function Home() {
                                   <input
                                     type="radio"
                                     name="contact_type"
-                                    id="<?php echo trans('front_home.inquiry'); ?>"
+                                    id={t("front_home.inquiry")}
                                     value="1"
                                   />
-                                  <label for="<?php echo trans('front_home.inquiry'); ?>">
-                                    استفسار
+                                  <label htmlFor={t("front_home.inquiry")}>
+                                    {t("front_home.inquiry")}
                                   </label>
                                 </div>
                                 <div className="checkBox">
@@ -205,10 +226,10 @@ export default function Home() {
                                     type="radio"
                                     name="contact_type"
                                     value="2"
-                                    id="<?php echo trans('front_home.compliant'); ?>"
+                                    id={t("front_home.compliant")}
                                   />
-                                  <label for="<?php echo trans('front_home.compliant'); ?>">
-                                    شكوى
+                                  <label htmlFor={t("front_home.compliant")}>
+                                    {t("front_home.compliant")}
                                   </label>
                                 </div>
                                 <div className="checkBox">
@@ -216,10 +237,10 @@ export default function Home() {
                                     type="radio"
                                     name="contact_type"
                                     value="3"
-                                    id="<?php echo trans('front_home.suggestion'); ?>"
+                                    id={t("front_home.suggestion")}
                                   />
-                                  <label for="<?php echo trans('front_home.suggestion'); ?>">
-                                    اقتراح
+                                  <label htmlFor={t("front_home.suggestion")}>
+                                    {t("front_home.suggestion")}
                                   </label>
                                 </div>
                                 <div className="checkBox">
@@ -227,10 +248,12 @@ export default function Home() {
                                     type="radio"
                                     name="contact_type"
                                     value="4"
-                                    id="<?php echo trans('front_home.contact_request'); ?>"
+                                    id={t("front_home.contact_request")}
                                   />
-                                  <label for="<?php echo trans('front_home.contact_request'); ?>">
-                                    طلب اتصال
+                                  <label
+                                    htmlFor={t("front_home.contact_request")}
+                                  >
+                                    {t("front_home.contact_request")}
                                   </label>
                                 </div>
                               </div>

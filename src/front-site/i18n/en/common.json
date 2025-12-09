@@ -20,6 +20,10 @@
   "front_home": {
     "newsletter_sub": "Subscribe to our newsletter to receive the latest updates",
     "enter_email": "Enter your email address",
+    "enter_fname": "Enter your first name",
+    "enter_lname": "Enter your last name",
+    "enter_phone": "Enter your phone",
+    "enter_message": "Write your message",
     "newsletter": "Newsletter",
     "quick_links": "Quick Links",
     "info": "Information",
@@ -31,10 +35,27 @@
     "facebook": "Facebook",
     "instagram": "Instagram",
     "twitter": "Twitter",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "company": "Company",
+    "address": "Address",
+    "email": "Email",
+    "phone": "Phone",
+    "whatsapp": "Whatsapp",
+    "happy_support": "We are happy to provide direct assistance to you",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "message": "Message",
+    "inquiry": "Inquiry",
+    "compliant": "Compliant",
+    "suggestion": "Suggestion",
+    "contact_request": "Request Call"
   },
   "pages": {
     "privacy_policy": "Privacy Policy",
     "terms": "Terms & Conditions"
+  },
+  "lang": {
+    "ar": "Arabic",
+    "en": "English"
   }
 }

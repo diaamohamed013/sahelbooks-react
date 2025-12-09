@@ -15,8 +15,17 @@ export const settings = {
 };
 
 export const settingsLang = {
-    site_name: "Sahel Books",
-    footer_about: "ستساعدك المحاسبة المبسطة و الفوترة الاحترافية وتتبع النفقات على توفير الوقت والمال انشئ فاتورتك الأولى في أقل من 60 ثانية",
-    copyright:
-        "جميع الحقوق محفوظة"
+    en: {
+        site_name: "Sahel Books",
+        footer_about:
+            "Simplified accounting, professional invoicing, and expense tracking will help you save time and money. Create your first invoice in less than 60 seconds.",
+        copyright: "All rights reserved",
+    },
+    ar: {
+        site_name: "ستة بوكس",
+        footer_about:
+            "ستساعدك المحاسبة المبسطة والفوترة الاحترافية وتتبع النفقات على توفير الوقت والمال. أنشئ فاتورتك الأولى في أقل من 60 ثانية.",
+        copyright: "جميع الحقوق محفوظة",
+    },
 };
+

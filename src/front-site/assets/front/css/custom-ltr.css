@@ -1,6 +1,6 @@
-body {
-    direction: ltr !important;
-    text-align: left !important;
+[lang="en"] body {
+    direction: ltr;
+    text-align: left;
 }
 
 .btn+.btn {

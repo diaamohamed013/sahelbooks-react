@@ -25,27 +25,26 @@ i18n.use(initReactI18next).init({
 });
 
 /* ✅ لما اللغة تتغير */
-i18n.on("languageChanged", async (lng) => {
+// i18n.on("languageChanged", async (lng) => {
+//     document.documentElement.lang = lng;
+//     document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
+
+//     /* ✅ خزّن اللغة */
+//     localStorage.setItem("lang", lng);
+// });
+
+i18n.on("languageChanged", (lng) => {
+    const isLTR = lng === "en";
+    const link = document.getElementById("ltr-style");
+
     document.documentElement.lang = lng;
-    document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
+    document.documentElement.dir = isLTR ? "ltr" : "rtl";
 
-    /* ✅ خزّن اللغة */
-    localStorage.setItem("lang", lng);
-
-    /* ✅ شيل أي ملف قديم */
-    const oldLink = document.getElementById("custom-ltr");
-    if (oldLink) oldLink.remove();
-
-    /* ✅ لو اللغة LTR */
-    if (lng !== "ar") {
-        const module = await import("../assets/front/css/custom-ltr.css");
-
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = module.default;
-        link.id = "custom-ltr";
-        document.head.appendChild(link);
+    if (link) {
+        link.disabled = !isLTR; // ✅ شبه @if
     }
+
+    localStorage.setItem("lang", lng);
 });
 
 export default i18n;

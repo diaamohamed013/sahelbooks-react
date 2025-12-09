@@ -61,7 +61,7 @@ export default function NavBar() {
             className="collapse navbar-collapse order-lg-2 order-md-3 order-3"
             id="navbarContainer"
           >
-            <ul className="navbar-nav mx-auto">
+            <ul className="navbar-nav newNav mx-auto">
               {/* Home */}
               <li className="nav-item">
                 <NavLink to="/" className="nav-link">
@@ -109,10 +109,82 @@ export default function NavBar() {
                   {t("nav.contact")}
                 </NavLink>
               </li>
+              {/* ===== Auth Links ===== */}
+              {isAdmin && (
+                <>
+                  <li className="nav-item d-none">
+                    <NavLink
+                      to="/admin/dashboard"
+                      className="btn dashCreateBtn mb-3"
+                    >
+                      {t("nav.dashboard")}
+                    </NavLink>
+                  </li>
+
+                  <li className="nav-item d-md-none">
+                    <NavLink to="/auth/logout" className="btn signLogBtn mb-3">
+                      {t("nav.logout")}
+                    </NavLink>
+                  </li>
+                </>
+              )}
+
+              {isDeveloper && (
+                <>
+                  <li className="nav-item d-none">
+                    <NavLink
+                      to="/admin/developer/dashboard"
+                      className="btn dashCreateBtn mb-3"
+                    >
+                      {t("nav.dashboard")}
+                    </NavLink>
+                  </li>
+
+                  <li className="nav-item d-md-none">
+                    <NavLink to="/auth/logout" className="btn signLogBtn mb-3">
+                      {t("nav.logout")}
+                    </NavLink>
+                  </li>
+                </>
+              )}
+
+              {isUser && (
+                <>
+                  <li className="nav-item d-none">
+                    <NavLink
+                      to="/admin/dashboard/business"
+                      className="btn dashCreateBtn mb-3"
+                    >
+                      {t("nav.dashboard")}
+                    </NavLink>
+                  </li>
+
+                  <li className="nav-item d-md-none">
+                    <NavLink to="/auth/logout" className="btn signLogBtn mb-3">
+                      {t("nav.logout")}
+                    </NavLink>
+                  </li>
+                </>
+              )}
+
+              {!isAdmin && !isDeveloper && !isUser && (
+                <>
+                  <li className="nav-item d-md-none">
+                    <NavLink to="/login" className="btn signLogBtn mb-3">
+                      {t("nav.login")}
+                    </NavLink>
+                  </li>
+                  <li className="nav-item d-none">
+                    <NavLink to="/register" className="btn dashCreateBtn mb-3">
+                      {t("nav.register")}
+                    </NavLink>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
           <div className="order-lg-3 order-md-2 order-2">
-            <div class="d-flex navOption_btn">
+            <div className="d-flex navOption_btn">
               {/* Auth logic */}
               {isAdmin && (
                 <>

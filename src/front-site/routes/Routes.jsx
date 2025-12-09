@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import MainLayout from "../../MainLayout";
 import Home from "../pages/home/Home";
+import ContactUs from "../pages/ContactUs";
 
 export const router = createBrowserRouter([
     {
@@ -12,8 +13,8 @@ export const router = createBrowserRouter([
                 element: <Navigate to="/home" />,
             },
             {
-                path: 'home',
-                element: <Home />, // ✅ هنا بتتعرض الصفحة داخل MainLayout
+                path: 'contact',
+                element: <ContactUs />, // ✅ هنا بتتعرض الصفحة داخل MainLayout
             }
         ]
     }

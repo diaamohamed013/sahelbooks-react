@@ -48,7 +48,9 @@
     "inquiry": "Inquiry",
     "compliant": "Compliant",
     "suggestion": "Suggestion",
-    "contact_request": "Request Call"
+    "contact_request": "Request Call",
+    "inquiries": "Frequently Asked Questions",
+    "inq_desc": "Answers to the most frequently asked questions about the affiliate marketing program"
   },
   "pages": {
     "privacy_policy": "Privacy Policy",
@@ -57,5 +59,42 @@
   "lang": {
     "ar": "Arabic",
     "en": "English"
+  },
+  "affiliate": {
+    "Earn_Lifetime": "Earn Lifetime Commission",
+    "hero_paragraph": "Join our affiliate program and earn lifetime commissions for every successful referral.",
+    "earn_now": "Start Earning Now",
+
+    "text1": "Commission on the first purchase",
+    "text2": "Commission on recurring purchases",
+
+    "commession_wrapper": "Affiliate commission details",
+
+    "steps_head": "How It Works",
+    "steps_content": "Start earning in just three simple steps.",
+
+    "steps_card1_text": "Register",
+    "steps_card1_content": "Create your affiliate account in minutes.",
+
+    "steps_card2_text": "Promote",
+    "steps_card2_content": "Share your referral link and promote our services.",
+
+    "steps_card3_text": "Earn",
+    "steps_card3_content": "Get paid for every customer you refer.",
+
+    "prog_head": "Why Our Affiliate Program?",
+    "prog_content": "We provide one of the most competitive affiliate programs in the market.",
+
+    "prog_card1_head": "High Commissions",
+    "prog_card1_text": "Earn generous commission rates.",
+
+    "prog_card2_head": "Competitive Advantage",
+    "prog_card2_text": "Attractive offers with high conversion rates.",
+
+    "prog_card3_head": "Dedicated Support",
+    "prog_card3_text": "Our team is always here to support you.",
+
+    "prog_card4_head": "Trusted Partnership",
+    "prog_card4_text": "Grow and succeed together with us."
   }
 }

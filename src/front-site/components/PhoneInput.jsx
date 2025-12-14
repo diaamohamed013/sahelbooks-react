@@ -3,104 +3,129 @@ import iti from "intl-tel-input";
 import "intl-tel-input/build/css/intlTelInput.css";
 import { useTranslation } from "react-i18next";
 
-// دعم النسخ الحديثة: ES Modules
+import { parsePhoneNumberFromString } from "libphonenumber-js";
+
 const intlTelInput = iti.default || iti;
 
 const PhoneInput = ({ pageType = "Request", onChange }) => {
-    const { t } = useTranslation("common");
-    const inputRef = useRef(null);
-    const [itiInstance, setItiInstance] = useState(null);
-    const [errorMsg, setErrorMsg] = useState("");
-    const [valid, setValid] = useState(false);
+  const { t } = useTranslation("common");
+  const inputRef = useRef(null);
+  const [itiInstance, setItiInstance] = useState(null);
+  const [errorMsg, setErrorMsg] = useState("");
+  const [valid, setValid] = useState(false);
 
-    const errorMap = {
-        "-99": "Too short",
-        0: "Invalid number",
-        1: "Invalid country code",
-        2: "Too short",
-        3: "Too long",
-        4: "Invalid number",
+  useEffect(() => {
+    if (!inputRef.current) return;
+
+    const instance = intlTelInput(inputRef.current, {
+      separateDialCode: true,
+      allowDropdown: pageType === "Request",
+      initialCountry: pageType === "Request" ? "auto" : "sa",
+      utilsScript: "../../front-site/assets/front/js/intltelinput-utils.js",
+      geoIpLookup:
+        pageType === "Request"
+          ? (callback) => {
+              fetch("https://ipapi.co/json")
+                .then((res) => res.json())
+                .then((data) =>
+                  callback(data?.country_code?.toLowerCase() || "sa")
+                )
+                .catch(() => callback("sa"));
+            }
+          : undefined,
+    });
+
+    setItiInstance(instance);
+
+    const reset = () => {
+      inputRef.current.classList.remove("error");
+      setErrorMsg("");
+      setValid(false);
     };
 
-    useEffect(() => {
-        if (!inputRef.current) return;
+    const validatePhone = () => {
+      reset();
 
-        // تهيئة intl-tel-input
-        const instance = intlTelInput(inputRef.current, {
-            separateDialCode: true,
-            allowDropdown: pageType === "Request",
-            initialCountry: pageType === "Request" ? "auto" : "sa",
-            utilsScript: "/front/js/intltelinput-utils.js",
-            geoIpLookup:
-                pageType === "Request"
-                    ? (callback) => {
-                        fetch("https://ipapi.co/json")
-                            .then((res) => res.json())
-                            .then((data) =>
-                                callback(data?.country_code?.toLowerCase() || "sa")
-                            )
-                            .catch(() => callback("sa"));
-                    }
-                    : undefined,
-        });
+      const rawValue = inputRef.current.value.trim();
+      if (!rawValue) {
+        onChange && onChange(null);
+        return;
+      }
 
-        setItiInstance(instance);
+      // نحصل على بيانات الدولة المختارة
+      const countryData = instance.getSelectedCountryData();
+      const countryCode = countryData?.iso2?.toUpperCase() || "";
 
-        const reset = () => {
-            inputRef.current.classList.remove("error");
-            setErrorMsg("");
-            setValid(false);
-        };
+      // نركّب الرقم الكامل مع كود الدولة
+      const fullNumber = `+${countryData?.dialCode || ""}${rawValue.replace(
+        /\D/g,
+        ""
+      )}`;
 
-        const handleChange = () => {
-            reset();
-            if (inputRef.current.value.trim()) {
-                if (instance.isValidNumber()) {
-                    setValid(true);
-                    setErrorMsg("");
-                    if (onChange) onChange(instance.getNumber()); // ترجع الرقم الكامل للوالد
-                } else {
-                    inputRef.current.classList.add("error");
-                    const errorCode = instance.getValidationError();
-                    const msg = errorMap[errorCode] || "Invalid number";
-                    setErrorMsg(msg);
-                    setValid(false);
-                    if (onChange) onChange(null);
-                }
-            } else {
-                if (onChange) onChange(null);
-            }
-        };
+      // نحاول نحلل الرقم باستخدام libphonenumber-js
+      const phoneNumber = parsePhoneNumberFromString(fullNumber, countryCode);
 
-        inputRef.current.addEventListener("blur", handleChange);
-        inputRef.current.addEventListener("change", handleChange);
-        inputRef.current.addEventListener("keyup", handleChange);
+      if (!phoneNumber) {
+        setErrorMsg(`Invalid number (${countryCode})`);
+        inputRef.current.classList.add("error");
+        onChange && onChange(null);
+        return;
+      }
 
-        return () => {
-          if (inputRef.current) {
-            inputRef.current.removeEventListener("blur", handleChange);
-            inputRef.current.removeEventListener("change", handleChange);
-            inputRef.current.removeEventListener("keyup", handleChange);
-          }
-          if (instance) {
-            instance.destroy();
-          }
-        };
+      // لو الرقم غير صالح
+      if (!phoneNumber.isValid()) {
+        const nationalLength = phoneNumber.nationalNumber.length;
 
-    }, [pageType, onChange]);
+        // طول الرقم المتوقع حسب الدولة
+        const minLength = phoneNumber.getMinimumLength();
+        const maxLength = phoneNumber.getMaximumLength();
 
-    return (
-        <div className="phone-input-wrapper">
-            <input
-                ref={inputRef}
-                type="tel"
-                className="form-control"
-                placeholder={t("front_home.phone")}
-            />
-            {errorMsg && <div className="text-danger">{errorMsg}</div>}
-            {valid && <div className="text-success">✓ Valid</div>}
-        </div>
-    );
+        if (nationalLength < minLength) {
+          setErrorMsg(`Too short (${countryCode})`);
+        } else if (nationalLength > maxLength) {
+          setErrorMsg(`Too long (${countryCode})`);
+        } else {
+          setErrorMsg(`Invalid number (${countryCode})`);
+        }
+
+        inputRef.current.classList.add("error");
+        onChange && onChange(null);
+        return;
+      }
+
+      // الرقم صحيح
+      setValid(true);
+      setErrorMsg("");
+      inputRef.current.classList.remove("error");
+      onChange && onChange(phoneNumber.number); // ترجع الرقم بصيغة E.164
+    };
+
+    inputRef.current.addEventListener("blur", validatePhone);
+    inputRef.current.addEventListener("change", validatePhone);
+    inputRef.current.addEventListener("keyup", validatePhone);
+
+    return () => {
+      if (inputRef.current) {
+        inputRef.current.removeEventListener("blur", validatePhone);
+        inputRef.current.removeEventListener("change", validatePhone);
+        inputRef.current.removeEventListener("keyup", validatePhone);
+      }
+      if (instance) instance.destroy();
+    };
+  }, [pageType, onChange]);
+
+  return (
+    <div className="phone-input-wrapper">
+      <input
+        ref={inputRef}
+        type="tel"
+        className="form-control"
+        placeholder={t("front_home.phone")}
+      />
+      {errorMsg && <div className="text-danger">{errorMsg}</div>}
+      {valid && <div className="text-success">Valid</div>}
+    </div>
+  );
 };
 
 export default PhoneInput;

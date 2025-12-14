@@ -12,6 +12,7 @@ import $percentage from "../../assets/front/images/percentage.svg";
 import $advantag from "../../assets/front/images/advantag.svg";
 import $support from "../../assets/front/images/support.svg";
 import $checkHands from "../../assets/front/images/checkHands.svg";
+import { NavLink } from "react-router-dom";
 
 export default function AffiliatePage() {
     const { t, i18n } = useTranslation("common");
@@ -78,12 +79,12 @@ export default function AffiliatePage() {
                       {t("affiliate.hero_paragraph")}
                     </p>
 
-                    <a
+                    <NavLink
                       className="btn btn-theme btn-sm dashCreateBtn px-10 my-4"
-                      href="/affiliate-request"
+                      to="/affiliate-request"
                     >
                       {t("affiliate.earn_now")}
-                    </a>
+                    </NavLink>
                   </div>
 
                   <div className="feature-wrapper">
@@ -243,12 +244,12 @@ export default function AffiliatePage() {
 
             <div className="row mt-5">
               <div className="col-lg-12 text-center">
-                <a
+                <NavLink
                   className="btn btn-theme btn-sm dashCreateBtn px-10 my-4"
-                  href="/affiliate-request"
+                  to="/affiliate-request"
                 >
                   {t("affiliate.earn_now")}
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -359,12 +360,12 @@ export default function AffiliatePage() {
 
             <div className="row mt-5">
               <div className="col-lg-12 text-center">
-                <a
+                <NavLink
                   className="btn btn-theme btn-sm dashCreateBtn px-10 my-4"
-                  href="/affiliate-request"
+                  to="/affiliate-request"
                 >
                   {t("affiliate.earn_now")}
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>

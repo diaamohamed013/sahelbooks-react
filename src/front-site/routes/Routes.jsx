@@ -3,6 +3,7 @@ import MainLayout from "../../MainLayout";
 import Home from "../pages/home/Home";
 import ContactUs from "../pages/ContactUs";
 import Affiliate from "../pages/affilate/Index";
+import CreateRequest from "../pages/affilate/CreateRequest";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: "affiliate",
         element: <Affiliate />, // ✅ هنا بتتعرض الصفحة داخل MainLayout
+      },
+      {
+        path: "affiliate-request",
+        element: <CreateRequest />, // ✅ هنا بتتعرض الصفحة داخل MainLayout
       },
     ],
   },

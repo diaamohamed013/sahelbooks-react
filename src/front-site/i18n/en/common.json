@@ -95,6 +95,25 @@
     "prog_card3_text": "Our team is always here to support you.",
 
     "prog_card4_head": "Trusted Partnership",
-    "prog_card4_text": "Grow and succeed together with us."
+    "prog_card4_text": "Grow and succeed together with us.",
+    "registration-system-is-disabled": "Registration system is currently disabled",
+    "affiliate_join": "Join Our Affiliate Program",
+    "affiliate_support": "We are happy to support you and answer all your questions about our affiliate program",
+
+    "first_name": "First Name",
+    "last_name": "Last Name",
+
+    "enter_fname": "Enter your first name",
+    "enter_lname": "Enter your last name",
+
+    "email": "Email Address",
+    "enter_email": "Enter your email address",
+
+    "phone": "Phone Number",
+    "address": "Address",
+
+    "enter_message": "Write your address in detail",
+
+    "affiliate_register": "Register as Affiliate"
   }
 }
